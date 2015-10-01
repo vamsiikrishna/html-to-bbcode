@@ -1,0 +1,10 @@
+~*
+/build/
+vendor
+composer.lock
+composer.phar
+.idea
+*.iml
+*.ipr
+*.iws
+*~
