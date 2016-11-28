@@ -2,9 +2,16 @@
 
 namespace Vamsi\HTMLToBBCode;
 
+use Vamsi\HTMLToBBCode\Converter\BreakConverter;
 use Vamsi\HTMLToBBCode\Converter\DefaultConverter;
+use Vamsi\HTMLToBBCode\Converter\FontConverter;
+use Vamsi\HTMLToBBCode\Converter\HeadConverter;
+use Vamsi\HTMLToBBCode\Converter\ImageConverter;
 use Vamsi\HTMLToBBCode\Converter\LinkConverter;
 use Vamsi\HTMLToBBCode\Converter\ConverterInterface;
+use Vamsi\HTMLToBBCode\Converter\ParagraphConverter;
+use Vamsi\HTMLToBBCode\Converter\TextStyleConverter;
+use Vamsi\HTMLToBBCode\Converter\ListConverter;
 
 final class Environment
 {
@@ -69,6 +76,13 @@ final class Environment
     {
         $environment = new static($config);
         $environment->addConverter(new LinkConverter());
+        $environment->addConverter(new ParagraphConverter());
+        $environment->addConverter(new TextStyleConverter());
+        $environment->addConverter(new HeadConverter());
+        $environment->addConverter(new BreakConverter());
+        $environment->addConverter(new ListConverter());
+        $environment->addConverter(new FontConverter());
+        $environment->addConverter(new ImageConverter());
 
         return $environment;
     }
