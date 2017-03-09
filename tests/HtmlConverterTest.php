@@ -58,4 +58,14 @@ class HtmlConverterTest extends \PHPUnit_Framework_TestCase
     {
         $this->html_gives_bbcode('<img src="http://lorempixel.com/g/400/200/" alt="lorem ipsum" />', '[img]http://lorempixel.com/g/400/200/[/img]');
     }
+
+    public function test_strong()
+    {
+        $this->html_gives_bbcode('<strong>some strong text</strong>', '[b]some strong text[/b]');
+    }
+
+    public function test_em()
+    {
+        $this->html_gives_bbcode('<em>some em text</em>', '[i]some em text[/i]');
+    }
 }
