@@ -10,6 +10,7 @@ use Vamsi\HTMLToBBCode\Converter\ImageConverter;
 use Vamsi\HTMLToBBCode\Converter\LinkConverter;
 use Vamsi\HTMLToBBCode\Converter\ConverterInterface;
 use Vamsi\HTMLToBBCode\Converter\ParagraphConverter;
+use Vamsi\HTMLToBBCode\Converter\PreConverter;
 use Vamsi\HTMLToBBCode\Converter\TextStyleConverter;
 use Vamsi\HTMLToBBCode\Converter\ListConverter;
 use Vamsi\HTMLToBBCode\Converter\EmConverter;
@@ -89,6 +90,7 @@ final class Environment
         $environment->addConverter(new QuoteConverter());
         $environment->addConverter(new FontConverter());
         $environment->addConverter(new ImageConverter());
+        $environment->addConverter(new PreConverter());
 
         return $environment;
     }
