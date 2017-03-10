@@ -73,4 +73,9 @@ class HtmlConverterTest extends \PHPUnit_Framework_TestCase
     {
         $this->html_gives_bbcode('<blockquote cite="http://developer.mozilla.org">This is a quotation taken from the Mozilla Developer Center.</blockquote>','[quote]This is a quotation taken from the Mozilla Developer Center.[/quote]');
     }
+
+    public function test_pre()
+    {
+        $this->html_gives_bbcode('<pre>monospaced text</pre>','[code]monospaced text[/code]');
+    }
 }
