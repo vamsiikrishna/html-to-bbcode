@@ -68,4 +68,9 @@ class HtmlConverterTest extends \PHPUnit_Framework_TestCase
     {
         $this->html_gives_bbcode('<em>some em text</em>', '[i]some em text[/i]');
     }
+
+    public function test_blockquote()
+    {
+        $this->html_gives_bbcode('<blockquote cite="http://developer.mozilla.org">This is a quotation taken from the Mozilla Developer Center.</blockquote>','[quote]This is a quotation taken from the Mozilla Developer Center.[/quote]');
+    }
 }

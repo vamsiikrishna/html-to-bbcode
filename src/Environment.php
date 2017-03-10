@@ -14,6 +14,7 @@ use Vamsi\HTMLToBBCode\Converter\TextStyleConverter;
 use Vamsi\HTMLToBBCode\Converter\ListConverter;
 use Vamsi\HTMLToBBCode\Converter\EmConverter;
 use Vamsi\HTMLToBBCode\Converter\StrongConverter;
+use Vamsi\HTMLToBBCode\Converter\QuoteConverter;
 
 final class Environment
 {
@@ -85,6 +86,7 @@ final class Environment
         $environment->addConverter(new ListConverter());
         $environment->addConverter(new EmConverter());
         $environment->addConverter(new StrongConverter());
+        $environment->addConverter(new QuoteConverter());
         $environment->addConverter(new FontConverter());
         $environment->addConverter(new ImageConverter());
 
