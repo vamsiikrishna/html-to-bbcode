@@ -18,11 +18,8 @@ class HtmlConverter
     public function __construct(array $options = array())
     {
         $defaults = array(
-            'header_style'    => 'setext', // Set to 'atx' to output H1 and H2 headers as # Header1 and ## Header2
             'suppress_errors' => true, // Set to false to show warnings when loading malformed HTML
             'strip_tags'      => false, // Set to true to strip tags that don't have bbcode equivalents. N.B. Strips tags, not their content. Useful to clean MS Word HTML output.
-            'bold_style'      => '**', // Set to '__' if you prefer the underlined style
-            'italic_style'    => '*', // Set to '_' if you prefer the underlined style
             'remove_nodes'    => '', // space-separated list of dom nodes that should be removed. example: 'meta style script'
         );
 
