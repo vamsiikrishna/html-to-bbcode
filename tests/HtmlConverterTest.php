@@ -78,4 +78,9 @@ class HtmlConverterTest extends \PHPUnit_Framework_TestCase
     {
         $this->html_gives_bbcode('<pre>monospaced text</pre>','[code]monospaced text[/code]');
     }
+
+    public function test_table()
+    {
+        $this->html_gives_bbcode('<table><tr><td>table 1</td><td>table 2</td></tr><tr><td>table 3</td><td>table 4</td></tr></table>','[table][tr][td]table 1[/td][td]table 2[/td][/tr][tr][td]table 3[/td][td]table 4[/td][/tr][/table]');
+    }
 }
