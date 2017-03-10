@@ -11,6 +11,7 @@ use Vamsi\HTMLToBBCode\Converter\LinkConverter;
 use Vamsi\HTMLToBBCode\Converter\ConverterInterface;
 use Vamsi\HTMLToBBCode\Converter\ParagraphConverter;
 use Vamsi\HTMLToBBCode\Converter\PreConverter;
+use Vamsi\HTMLToBBCode\Converter\TableConverter;
 use Vamsi\HTMLToBBCode\Converter\TextStyleConverter;
 use Vamsi\HTMLToBBCode\Converter\ListConverter;
 use Vamsi\HTMLToBBCode\Converter\EmConverter;
@@ -91,6 +92,7 @@ final class Environment
         $environment->addConverter(new FontConverter());
         $environment->addConverter(new ImageConverter());
         $environment->addConverter(new PreConverter());
+        $environment->addConverter(new TableConverter());
 
         return $environment;
     }
